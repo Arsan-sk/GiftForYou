@@ -46,13 +46,13 @@ npm run start
 
 ## Gift Finder stock
 
-The repository includes generated SVG placeholders so the Gift Finder works immediately. To fetch six Pexels images per category when `PEXELS_API_KEY` is configured, run:
+The repository includes a generated SVG fallback, and the seed command downloads ten genuine JPEG photographs per category into the private Gift Finder stock library. It prefers Pexels when `PEXELS_API_KEY` is configured and otherwise uses category-keyword photographs from LoremFlickr:
 
 ```bash
 npm run seed:gift-stock
 ```
 
-Stock images are stored under `public/gift-stock/<category-slug>/` and are only used by the Gift Finder result screen.
+Stock images are stored under `public/gift-stock/<category-slug>/` and are only used by the Gift Finder result screen. The server randomly selects one of the ten images from the matched category. If an LLM key is missing or a provider fails, a small local keyword engine scores the answers and chooses the best category, using random selection only when there is no useful signal.
 
 ## Routes
 

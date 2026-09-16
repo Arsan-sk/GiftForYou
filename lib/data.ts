@@ -16,4 +16,4 @@ export type CategorySlug = Category['slug'];
 
 export const categoryBySlug = (slug: string) => categories.find((category) => category.slug === slug);
 
-export const finderStockImage = (slug: CategorySlug) => `/gift-stock/${slug}/placeholder.svg`;
+export const finderStockImage = (slug: CategorySlug, imageIndex = Math.floor(Math.random() * 10) + 1) => `/gift-stock/${slug}/${imageIndex}.jpg`;
