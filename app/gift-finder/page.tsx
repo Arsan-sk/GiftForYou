@@ -1,0 +1,3 @@
+import { GiftFinder } from '@/components/gift-finder';
+
+export default function GiftFinderPage() { return <div className="shell finder-page"><div className="finder-wrap"><div className="finder-head"><p className="eyebrow">Powered by AI, guided by feeling</p><h1 className="display display-lg">A little context<br /><em>goes a long way.</em></h1><p>Answer five small questions. We will find a gift category with the right kind of meaning.</p></div><GiftFinder /></div></div>; }

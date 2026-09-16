@@ -1,0 +1,5 @@
+import { Instagram, Mail } from 'lucide-react';
+import { Reveal } from '@/components/reveal';
+import { ContactForm } from '@/components/contact-form';
+
+export default function ContactPage() { return <div className="shell"><div className="page-intro"><p className="eyebrow">Come say hello</p><h1 className="display display-lg">A note, a question,<br />a good story.</h1><p>The studio is small, the kettle is usually on, and thoughtful questions are always welcome.</p></div><div className="contact-layout"><Reveal><div className="contact-details"><p className="eyebrow">Find the studio</p><strong>14 Mercer Lane</strong><span>Richmond, Melbourne<br />VIC 3121, Australia</span><strong>Open hours</strong><span>Tuesday–Saturday, 10am–5pm<br />By appointment on Mondays</span><div className="map-art" aria-label="Illustrated map showing WRAPT studio location" role="img" /><div className="socials" style={{ color: 'var(--ink)' }}><a href="#" aria-label="Instagram"><Instagram size={18} /></a><a href="mailto:hello@wrapt.studio" aria-label="Email WRAPT"><Mail size={18} /></a></div></div></Reveal><Reveal delay={.1}><ContactForm /></Reveal></div></div>; }
